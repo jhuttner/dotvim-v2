@@ -4,6 +4,9 @@ filetype plugin indent on
 
 let mapleader = ","
 
+" Use pyflakes for python syntax checking
+let g:syntastic_python_checkers=['pyflakes']
+
 set nocompatible
 set modelines=10
 set modeline
