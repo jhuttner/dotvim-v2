@@ -7,6 +7,8 @@ let mapleader = ","
 " Use pyflakes for python syntax checking
 let g:syntastic_python_checkers=['pyflakes']
 
+set colorcolumn=80,100
+highlight ColorColumn ctermbg=black
 set nocompatible
 set modelines=10
 set modeline
@@ -242,6 +244,9 @@ syntax enable
 " highlight ColorColumn ctermbg=493
 
 set directory=/home/jhuttner/.swp
+
+" for vim-commentary
+autocmd FileType sql setlocal commentstring=--\ %s
 
 " for markdown file editing
 autocmd BufRead *\.markdown setlocal formatoptions=l
