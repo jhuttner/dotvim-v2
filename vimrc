@@ -6,6 +6,7 @@ let mapleader = ","
 
 " Use pyflakes for python syntax checking
 let g:syntastic_python_checkers=['pyflakes']
+let g:pyflakes_use_quickfix = 1
 
 set colorcolumn=80,100
 highlight ColorColumn ctermbg=black
@@ -13,7 +14,12 @@ set nocompatible
 set modelines=10
 set modeline
 
-set viminfo='100,\"1000,:100,%,n~/.viminfo
+" Fix up/down arrow keys not being able to scroll through history
+" http://unix.stackexchange.com/questions/1709/how-to-fix-ctrl-arrows-in-vim
+map <ESC>[1;5A <C-Up>
+map <ESC>[1;5B <C-Down>
+map! <ESC>[1;5A <C-Up>
+map! <ESC>[1;5B <C-Down>
 
 function! ResCur()
   if line("'\"") <= line("$")
