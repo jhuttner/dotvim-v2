@@ -55,6 +55,8 @@ augroup filetype
 	au!
 	au! BufRead,BufNewFile *.phtml set ft=php.html " For SnipMate
 	au! BufRead,BufNewFile *.tpl set ft=html " For SnipMate
+	au! BufRead,BufNewFile *.yaml set syntax=off 
+	au! BufRead,BufNewFile *.yml set syntax=off 
 	au BufNewFile,BufRead .tmux.conf*,tmux.conf*,tmux.* setf tmux
 augroup END
 
